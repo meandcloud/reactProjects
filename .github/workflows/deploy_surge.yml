@@ -32,9 +32,9 @@ jobs:
         with:
           node-version: 12
       - name: Install Surge
-        run: npm install -g surge   
+        run: npm install -g surge
       - name: Run Surge
-        run: surge ./ onlinebox.surge.sh
+        run: surge ./ onlinebox.surge.sh --token ${{secret.SURGE_TOKEN}}
         
         
         
